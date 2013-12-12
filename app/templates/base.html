@@ -1,0 +1,14 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{title}} - CitiBike Wait Times</title>
+    {% else %}
+    <title>CitiBike Wait Times</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>CitiBike Wait Times: <a>FAQ (coming soon)</a></div>
+    <hr>
+    {% block content %}{% endblock %}
+  </body>
+</html>

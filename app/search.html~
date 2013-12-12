@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CitiBike Wait Times</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div style="margin: 50px 50px">
+	<label for="station_search">Enter CitiBike Station: </label>
+	<input id="station_search" type="text" class="span3" data-provide="typeahead" data-source='["W 52 St & 11 Ave", "Franklin St & W Broadway", "St James Pl & Pearl St", "Atlantic Ave & Fort Greene Pl", "W 17 St & 8 Ave", "Park Ave & St Edwards St", "Lexington Ave & Classon Ave"]'></div>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-typeahead.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CitiBike Wait Times</title>
+    <link href="/static/bootstrap.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div style="margin: 25px 50px">
+<form action="" method="post" name="station">
+	{{form.hidden_tag()}}
+	<p>
+		Enter your station:<br>
+		{{form.station(size=100, **{'data-provide':'typeahead', 'data-source':'["MacDougal St & Prince St", "E 11 St & 2 Ave"]'})}}<br>
+	</p>
+	<hr>
+	<p>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	<ul>
+	{% for message in messages %}
+		<li>{{ message }} </li>
+	{% endfor %}
+	</ul>
+	{% endif %}
+	{% endwith %}
+<script type=text/javascript src="{{
+  url_for('static', filename='jquery.js') }}"></script>
+<script type=text/javascript src="{{
+  url_for('static', filename='bootstrap-typeahead.js') }}"></script></body>
+</html>
+{% endblock %}

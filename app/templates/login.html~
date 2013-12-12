@@ -1,0 +1,31 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Sign In</h1>
+<form action="" method="post" name="login">
+    {{form.hidden_tag()}}
+    <p>
+        Please enter your OpenID:<br>
+        {{form.openid(size=80)}}<br>
+    </p>
+    <p>{{form.remember_me}} Remember Me</p>
+    <p><input type="submit" value="Sign In"></p>
+</form>	
+<select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select> 
+<form class="form-search">
+    <div class="input-append">
+        <input type="text" class="span2 search-query">
+        <button type="submit" class="btn">Search</button>
+    </div>
+    <div class="input-prepend">
+        <button type="submit" class="btn">Search</button>
+        <input type="text" class="span2 search-query">
+    </div>
+</form>
+{% endblock %}
